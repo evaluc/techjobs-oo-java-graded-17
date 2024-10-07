@@ -72,10 +72,46 @@ public class Job {
         public int getId () {
             return id;
         }
-
+    /*
     @Override
+    //public String toString() {return System.lineSeparator() + System.lineSeparator();}
     public String toString() {
-        return System.lineSeparator() + System.lineSeparator();
+        String printedJobObject;
+
+        printedJobObject = """
+
+                ID: %d
+                Name: %s
+                Employer: %s
+                Location: %s
+                Position Type: %s
+                Core Competency: %s
+                """;
+
+        return printedJobObject.formatted(this.getId(), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue());
+    }
+*/
+    @Override
+    //public String toString() {return System.lineSeparator() + System.lineSeparator();}
+    public String toString() {
+        String printedJobObject;
+        String lineSep = System.lineSeparator();
+
+        printedJobObject = "%s"
+                + "ID: %d"
+                + "%s"
+                + "Name: %s"
+                + "%s"
+                + "Employer: %s"
+                + "%s"
+                + "Location: %s"
+                + "%s"
+                + "Position Type: %s"
+                + "%s"
+                + "Core Competency: %s"
+                + "%s";
+
+        return printedJobObject.formatted(lineSep, this.getId(), lineSep, this.getName(), lineSep, this.getEmployer().getValue(), lineSep, this.getLocation().getValue(), lineSep, this.getPositionType().getValue(), lineSep, this.getCoreCompetency().getValue(), lineSep);
     }
 
 
