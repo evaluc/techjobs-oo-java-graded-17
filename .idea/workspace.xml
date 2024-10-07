@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Complete Task 3 - Finish Job Class">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Complete Task 4 - Unit Testing Job Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
     </list>
@@ -79,7 +79,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.JobTest.testJobConstructorSetsAllFields">
+  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo'">
     <configuration name="JobTest.testJobConstructorSetsAllFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -222,8 +222,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
+        <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
         <item itemvalue="Gradle.TestTaskFive" />
         <item itemvalue="Gradle.TestTaskFour" />
         <item itemvalue="Gradle.JobTest.testJobsForEquality" />
@@ -263,13 +263,22 @@
       <option name="project" value="LOCAL" />
       <updated>1728239722425</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete Task 4 - Unit Testing Job Class">
+      <option name="closed" value="true" />
+      <created>1728245041570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728245041570</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Complete Task 2, 9 of 9 Tests Pass" />
     <MESSAGE value="Misc file versioning" />
     <MESSAGE value="Complete Task 3 - Finish Job Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete Task 3 - Finish Job Class" />
+    <MESSAGE value="Complete Task 4 - Unit Testing Job Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Task 4 - Unit Testing Job Class" />
   </component>
 </project>

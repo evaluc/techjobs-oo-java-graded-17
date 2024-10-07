@@ -43,4 +43,25 @@ public class JobTest {
         assertNotEquals(jobEqualityTestOne, jobEqualityTestTwo);
     }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job jobTestAllConstructors = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String jobStringTest = jobTestAllConstructors.toString();
+        String newline = System.lineSeparator();
+
+        assertEquals(newline, jobStringTest.charAt(0));
+        assertEquals(newline, jobStringTest.charAt(jobStringTest.length() -1));
+
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+
+    }
+
 }
