@@ -74,6 +74,12 @@ public class Job {
         }
 
     @Override
+    public String toString() {
+        return System.lineSeparator() + System.lineSeparator();
+    }
+
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

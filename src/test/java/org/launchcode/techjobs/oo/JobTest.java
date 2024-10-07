@@ -49,13 +49,38 @@ public class JobTest {
         String jobStringTest = jobTestAllConstructors.toString();
         String newline = System.lineSeparator();
 
-        assertEquals(newline, jobStringTest.charAt(0));
-        assertEquals(newline, jobStringTest.charAt(jobStringTest.length() -1));
+        //Not quite working
+        //assertEquals(newline, jobStringTest.substring(0, 1));
+        //assertEquals(newline, jobStringTest.substring(jobStringTest.length() - 1));
+
+        // Doesn't quite work - string vs. character
+        //assertEquals(newline, jobStringTest.charAt(0));
+        //assertEquals(newline, jobStringTest.charAt(jobStringTest.length() -1));
+
+        // Better solution but not asked for by assignment
+        assertTrue(jobStringTest.startsWith(newline));
+        assertTrue(jobStringTest.endsWith(newline));
 
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
+        Job jobTestAllConstructors = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String jobStringLabelsAndDataTest = jobTestAllConstructors.toString();
+        String newline = System.lineSeparator();
+        /*
+        Integer jobID = jobTestAllConstructors.getId();
+        String jobName = jobTestAllConstructors.getName();
+        String jobEmployer = jobTestAllConstructors.getEmployer().getValue();
+        String jobLocation = jobTestAllConstructors.getLocation().getValue();
+        String jobPosition = jobTestAllConstructors.getPositionType().getValue();
+        String jobCompetency = jobTestAllConstructors.getCoreCompetency().getValue();
+        */
+
+        String expectedLabelsAndData = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "ACME" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Quality control" + newline + "Core Competency: " + "Persistence" + newline;
+
+        assertEquals(expectedLabelsAndData, jobStringLabelsAndDataTest);
+
 
     }
 
