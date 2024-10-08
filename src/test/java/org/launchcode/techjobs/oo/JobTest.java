@@ -86,6 +86,14 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField() {
+        Job jobTestEmptyFieldsHandling = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
+        String jobStringEmptyFieldsHandlingTest = jobTestEmptyFieldsHandling.toString();
+        String newline = System.lineSeparator();
+
+        String expectedEmptyFieldHandling = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "Data not available" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Data not available" + newline + "Core Competency: " + "Persistence" + newline;
+
+        assertEquals(expectedEmptyFieldHandling, jobStringEmptyFieldsHandlingTest);
+
 
     }
 
