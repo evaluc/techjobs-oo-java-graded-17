@@ -68,19 +68,10 @@ public class JobTest {
         Job jobTestAllConstructors = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String jobStringLabelsAndDataTest = jobTestAllConstructors.toString();
         String newline = System.lineSeparator();
-        /*
-        Integer jobID = jobTestAllConstructors.getId();
-        String jobName = jobTestAllConstructors.getName();
-        String jobEmployer = jobTestAllConstructors.getEmployer().getValue();
-        String jobLocation = jobTestAllConstructors.getLocation().getValue();
-        String jobPosition = jobTestAllConstructors.getPositionType().getValue();
-        String jobCompetency = jobTestAllConstructors.getCoreCompetency().getValue();
-        */
 
         String expectedLabelsAndData = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "ACME" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Quality control" + newline + "Core Competency: " + "Persistence" + newline;
 
         assertEquals(expectedLabelsAndData, jobStringLabelsAndDataTest);
-
 
     }
 
@@ -93,7 +84,6 @@ public class JobTest {
         String expectedEmptyFieldHandling = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "Data not available" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Data not available" + newline + "Core Competency: " + "Persistence" + newline;
 
         assertEquals(expectedEmptyFieldHandling, jobStringEmptyFieldsHandlingTest);
-
 
     }
 

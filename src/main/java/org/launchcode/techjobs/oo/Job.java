@@ -72,30 +72,23 @@ public class Job {
         public int getId () {
             return id;
         }
-    /*
+
     @Override
-    //public String toString() {return System.lineSeparator() + System.lineSeparator();}
-    public String toString() {
-        String printedJobObject;
-
-        printedJobObject = """
-
-                ID: %d
-                Name: %s
-                Employer: %s
-                Location: %s
-                Position Type: %s
-                Core Competency: %s
-                """;
-
-        return printedJobObject.formatted(this.getId(), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue());
-    }
-*/
-    @Override
-    //public String toString() {return System.lineSeparator() + System.lineSeparator();}
     public String toString() {
         String printedJobObject;
         String lineSep = System.lineSeparator();
+        Integer aJobID = this.getId();
+        String aJobName = this.getName();
+        String aJobEmployer = this.getEmployer().getValue();
+        String aJobLocation = this.getLocation().getValue();
+        String aJobPosition = this.getPositionType().getValue();
+        String aJobCompetency = this.getCoreCompetency().getValue();
+
+       String checkedNEJobName = aJobName.isEmpty() ? "Data not available" : aJobName;
+       String checkedNEJobEmployer = aJobEmployer.isEmpty() ? "Data not available" : aJobEmployer;
+       String checkedNEJobLocation = aJobLocation.isEmpty() ? "Data not available" : aJobLocation;
+       String checkedNEJobPosition = aJobPosition.isEmpty() ? "Data not available" : aJobPosition;
+       String checkedNEJobCompetency = aJobCompetency.isEmpty() ? "Data not available" : aJobCompetency;
 
         printedJobObject = "%s"
                 + "ID: %d"
@@ -111,7 +104,7 @@ public class Job {
                 + "Core Competency: %s"
                 + "%s";
 
-        return printedJobObject.formatted(lineSep, this.getId(), lineSep, this.getName(), lineSep, this.getEmployer().getValue(), lineSep, this.getLocation().getValue(), lineSep, this.getPositionType().getValue(), lineSep, this.getCoreCompetency().getValue(), lineSep);
+        return printedJobObject.formatted(lineSep, aJobID, lineSep, checkedNEJobName, lineSep, checkedNEJobEmployer, lineSep, checkedNEJobLocation, lineSep, checkedNEJobPosition, lineSep, checkedNEJobCompetency, lineSep);
     }
 
 
