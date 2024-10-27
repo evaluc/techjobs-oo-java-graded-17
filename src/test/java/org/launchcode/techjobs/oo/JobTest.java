@@ -5,7 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class JobTest {
-    //TODO: Create your unit tests here
 
     @Test
     public void testSettingJobId() {
@@ -49,15 +48,6 @@ public class JobTest {
         String jobStringTest = jobTestAllConstructors.toString();
         String newline = System.lineSeparator();
 
-        //Not quite working
-        //assertEquals(newline, jobStringTest.substring(0, 1));
-        //assertEquals(newline, jobStringTest.substring(jobStringTest.length() - 1));
-
-        // Doesn't quite work - string vs. character
-        //assertEquals(newline, jobStringTest.charAt(0));
-        //assertEquals(newline, jobStringTest.charAt(jobStringTest.length() -1));
-
-        // Better solution but not asked for by assignment
         assertTrue(jobStringTest.startsWith(newline));
         assertTrue(jobStringTest.endsWith(newline));
 
@@ -68,8 +58,9 @@ public class JobTest {
         Job jobTestAllConstructors = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String jobStringLabelsAndDataTest = jobTestAllConstructors.toString();
         String newline = System.lineSeparator();
+        Integer expectedTestID = jobTestAllConstructors.getId();
 
-        String expectedLabelsAndData = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "ACME" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Quality control" + newline + "Core Competency: " + "Persistence" + newline;
+        String expectedLabelsAndData = newline + "ID: " + expectedTestID + newline + "Name: " + "Product tester" + newline + "Employer: " + "ACME" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Quality control" + newline + "Core Competency: " + "Persistence" + newline;
 
         assertEquals(expectedLabelsAndData, jobStringLabelsAndDataTest);
 
@@ -80,8 +71,9 @@ public class JobTest {
         Job jobTestEmptyFieldsHandling = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
         String jobStringEmptyFieldsHandlingTest = jobTestEmptyFieldsHandling.toString();
         String newline = System.lineSeparator();
+        Integer expectedTestIDTwo = jobTestEmptyFieldsHandling.getId();
 
-        String expectedEmptyFieldHandling = newline + "ID: " + "1" + newline + "Name: " + "Product tester" + newline + "Employer: " + "Data not available" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Data not available" + newline + "Core Competency: " + "Persistence" + newline;
+        String expectedEmptyFieldHandling = newline + "ID: " + expectedTestIDTwo + newline + "Name: " + "Product tester" + newline + "Employer: " + "Data not available" + newline + "Location: " + "Desert" + newline + "Position Type: " + "Data not available" + newline + "Core Competency: " + "Persistence" + newline;
 
         assertEquals(expectedEmptyFieldHandling, jobStringEmptyFieldsHandlingTest);
 
